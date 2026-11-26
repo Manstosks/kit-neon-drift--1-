@@ -159,3 +159,165 @@ footer p { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   .pulsante { transition: none; }
   .pulsante:hover { transform: none; }
+/* ===== Base ===== */
+:root {
+  --sfondo: #0f172a;
+  --scheda: #1e293b;
+  --bordo: #334155;
+  --testo: #e2e8f0;
+  --testo-tenue: #cbd5e1;
+  --ciano: #67e8f9;
+  --viola: #a78bfa;
+  --giallo: #fde68a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--sfondo);
+  color: var(--testo);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+img { max-width: 100%; height: auto; }
+
+/* ===== Hero ===== */
+.hero {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 24px 32px;
+  text-align: center;
+}
+
+.etichetta {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 4px 14px;
+  border: 1px solid var(--viola);
+  border-radius: 999px;
+  color: var(--viola);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+h1 {
+  margin: 0 0 8px;
+  color: var(--ciano);
+  font-size: 3.5rem;
+  line-height: 1.1;
+  text-shadow: 0 0 18px rgba(103, 232, 249, 0.45);
+}
+
+.slogan {
+  margin: 0 0 24px;
+  color: var(--testo-tenue);
+  font-size: 1.25rem;
+}
+
+.copertina {
+  display: block;
+  width: 100%;
+  margin: 0 auto 24px;
+  border: 2px solid var(--bordo);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* ===== Link-pulsante ===== */
+.pulsante {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: var(--ciano);
+  color: var(--sfondo);
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(103, 232, 249, 0.35);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.pulsante:hover {
+  background: var(--giallo);
+  transform: translateY(-2px);
+}
+
+.pulsante:focus-visible {
+  outline: 3px solid var(--giallo);
+  outline-offset: 4px;
+}
+
+/* ===== Schede ===== */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px 24px;
+}
+
+.scheda {
+  margin-bottom: 24px;
+  padding: 24px 28px;
+  border: 1px solid var(--bordo);
+  border-left: 5px solid var(--viola);
+  border-radius: 14px;
+  background: var(--scheda);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  scroll-margin-top: 16px;
+}
+
+.scheda h2 {
+  margin: 0 0 12px;
+  color: var(--ciano);
+  font-size: 1.6rem;
+}
+
+.scheda p { margin: 0 0 12px; }
+.scheda p:last-child { margin-bottom: 0; }
+.scheda ul { margin: 0; padding-left: 22px; }
+.scheda li { margin-bottom: 6px; }
+
+.prezzo {
+  display: inline-block;
+  padding: 4px 16px;
+  border: 1px solid var(--giallo);
+  border-radius: 8px;
+  color: var(--giallo);
+  font-weight: 700;
+}
+
+.veicolo {
+  display: block;
+  width: 120px;
+  margin: 0 auto 16px;
+}
+
+/* ===== Footer ===== */
+footer {
+  padding: 24px;
+  border-top: 1px solid var(--bordo);
+  color: var(--testo-tenue);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+footer p { margin: 0; }
+
+/* ===== Schermi piccoli ===== */
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .hero { padding: 32px 16px 24px; }
+  main { padding: 0 16px 16px; }
+  h1 { font-size: 2.3rem; }
+  .slogan { font-size: 1.05rem; }
+  .scheda { padding: 18px 18px; }
+  .scheda h2 { font-size: 1.35rem; }
+  .veicolo { width: 96px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulsante { transition: none; }
+  .pulsante:hover { transform: none; }
+}
